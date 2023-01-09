@@ -78,7 +78,7 @@ map = [
 ]
 
 # Days and Hours---------------------------------------------------------
-import random
+import random #Imported from Library
 schedule = [
 'Monday: Open for 7 Hours      ',
 'Tuesday: Open for 8 Hours     ',
@@ -170,7 +170,7 @@ while True:
                print(Cost1)
                product3 = input('Do you want to see the cost of other products? (yes/no)\n')
         
-               if product3 == 'no':
+               while product3 == 'no':
                   print('Okay, Wave your hand if you need anything else.')
                   bot = input('---Ready with a question? Wave your hand!')
           
@@ -184,7 +184,7 @@ while True:
                print(Cost2)
                product3 = input('Do you want to see the cost of other products? (yes/no)\n')
         
-               if product3 == 'no':
+               while product3 == 'no':
                   print('Okay, Wave your hand if you need anything else.')
                   bot = input('---Ready with a question? Wave your hand!')
           
@@ -198,12 +198,15 @@ while True:
                print(Cost3)
                product3 = input('Do you want to see the cost of other products? (yes/no)\n')
         
-               if product3 == 'no':
+               while product3 == 'no':
                   print('Okay, Wave your hand if you need anything else.')
                   bot = input('---Ready with a question? Wave your hand!')
           
-               if bot == 'Wave':
-                  bot = input('Welcome to Targots! Do you have questions for the follow: Store hours, mapping of categories, list of products? (yes/no)\n')
+                  if bot == 'Wave':
+                     bot = input('Welcome to Targots! Do you have questions for the follow: Store hours, mapping of categories, list of products? (yes/no)\n')
 
-                  if product3 == 'yes':
-                     product = input('Tell me a category you would like to view the cost of each product.\n')
+               if product3 == 'yes':
+                  product = input('Tell me a category you would like to view the cost of each product.\n')
+
+  else:
+    bot = input('Can you repeat that? Do you have any questions for the following: Store hours, Mapping of Categories, List of Products? (yes/no)\n ')
